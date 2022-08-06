@@ -17,22 +17,34 @@
   <title>inspire</title>
 </head>
 
-<body>
+<body class="bg-dark">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <span class="ms-2">inspire</span>
-      </a>
+    </div>
     </nav>
   </header>
-  <main id="bg-inspire" class="hero-img img-fluid">
-    <div class="container-fluid">
-      <div class="row">
-        <div id="clock" class="clock" onload="showTime()"></div>
-        <div class="col-3 card" id="weather">
-
-        </div>
-      </div>
+  <main id="bg-inspire" class="hero-img img-fluid p-3">
+    <div class="container-fluid text-light text-shadow">
+<!--                STUB               clock                   -->
+      <div id="clock" class="clock no-select" onload="showTime()"></div>
+      <section class="row">
+<!--                STUB              quotes                   -->
+        <div class="text-light text-shadow no-select quote ">
+          <h5 id="quote">
+            "What matters <b>most</b> in life are quotes and stuff that tell you what life is <b>really</b> all about...
+            and here's a picture of a tree"</h5>
+            <h5 id="author" class="text-light text-center text-shadow">-the wizened sage</h5>
+          </div>
+          <div class="col-2 weather-box container-fluid mt-5" id="weather">
+<!--                STUB               Weather                 -->
+            <section class="d-flex">
+              <div id="main" class="">main</div>
+              <div id="description" class="">description</div>
+              <img id="icon" class="" src="http://openweathermap.org/img/wn/10n@2x.png"></img>
+              <div id="temp" class="">temp</div>
+            </section>
+          </div>
+<!--                STUB                to do form              -->
+      </section>
     </div>
   </main>
   <footer class="bg-dark text-light">

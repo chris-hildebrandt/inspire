@@ -4,8 +4,9 @@ import { ProxyState } from "../AppState.js"
 
 function _drawBgImg(){
   document.body.style.backgroundImage = `url(${ProxyState.backgroundImg})`;
-  document.body.style.backgroundRepeat = "no-repeat";
-  document.body.style.backgroundSize = "cover";
+  // document.body.style.backgroundRepeat = "no-repeat";
+  // document.body.style.backgroundSize = "cover";
+
 }
 
 function _drawTime(){
