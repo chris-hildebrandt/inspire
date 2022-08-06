@@ -11,6 +11,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Weather').Weather} */
   // @ts-ignore
   weather = null
+  temp = 0
+  tempUnit = 'F'
 
   /** @type {import('./Models/Quote').Quote} */
   // @ts-ignore

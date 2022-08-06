@@ -26,24 +26,32 @@
     <div class="container-fluid text-light text-shadow">
 <!--                STUB               clock                   -->
       <div id="clock" class="clock no-select" onload="showTime()"></div>
-      <section class="row">
+      <section class="row full-height">
 <!--                STUB              quotes                   -->
-        <div class="text-light text-shadow no-select quote ">
-          <h5 id="quote">
+        <div class="text-light text-shadow no-select">
+          <div class="quote">
+            <h5 id="quote">
             "What matters <b>most</b> in life are quotes and stuff that tell you what life is <b>really</b> all about...
             and here's a picture of a tree"</h5>
             <h5 id="author" class="text-light text-center text-shadow">-the wizened sage</h5>
           </div>
-          <div class="col-2 weather-box container-fluid mt-5" id="weather">
+        </div>
+          <div class="col-2 weather-box container-fluid mt-4" id="weather">
 <!--                STUB               Weather                 -->
-            <section class="d-flex">
+            <!-- <section class="d-flex">
               <div id="main" class="">main</div>
               <div id="description" class="">description</div>
               <img id="icon" class="" src="http://openweathermap.org/img/wn/10n@2x.png"></img>
               <div id="temp" class="">temp</div>
-            </section>
+            </section> -->
           </div>
 <!--                STUB                to do form              -->
+        <div class="col-8 col-md-3 card bg-glass align-self-center offset-md-9">
+          <nav>
+            <p>completed:</p>
+            <p>todo</p>
+          </nav>
+        </div>
       </section>
     </div>
   </main>
