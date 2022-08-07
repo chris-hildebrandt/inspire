@@ -18,7 +18,6 @@ export class WeatherController {
     this.getWeather()
   }
 
-
   async getWeather() {
     try {
       await weatherService.getWeather()

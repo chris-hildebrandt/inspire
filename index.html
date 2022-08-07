@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
@@ -28,14 +31,15 @@
       <div id="clock" class="clock no-select" onload="showTime()"></div>
       <section class="row full-height">
 <!--                STUB              quotes                   -->
-        <div class="text-light text-shadow no-select">
-          <div class="quote">
+        <div class="col-10 text-light text-shadow no-select m-3">
+          <div class="quote container-fluid">
             <h5 id="quote">
             "What matters <b>most</b> in life are quotes and stuff that tell you what life is <b>really</b> all about...
             and here's a picture of a tree"</h5>
             <h5 id="author" class="text-light text-center text-shadow">-the wizened sage</h5>
           </div>
         </div>
+        <button class="col-1 btn btn-primary h-sm d-none d-md-block text-light text-shadow" onclick="app.displayController.getBackgroundImg()">next inspiration</button>
           <div class="col-2 weather-box container-fluid mt-4" id="weather">
 <!--                STUB               Weather                 -->
             <!-- <section class="d-flex">
@@ -46,17 +50,42 @@
             </section> -->
           </div>
 <!--                STUB                to do form              -->
-        <div class="col-8 col-md-3 card bg-glass align-self-center offset-md-9">
-          <nav>
-            <p>completed:</p>
-            <p>todo</p>
-          </nav>
+        <div class="col-8 col-md-4 card bg-glass align-self-center offset-md-8">
+          <div class="row">
+            <p class="col-6">To Do:</p>
+            <p class="col-5 offset-1">Completed: <span id="tasks-total">10</span> / <span id="tasks-completed" class="">10</span></p>
+            <div id="to-do">
+              <!-- <div class="col-12 m-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">example</label>
+              </div> -->
+            </div>
+            <button type="button" class="text-light text-shadow btn mdi mdi-shape-square-rounded-plus" data-bs-toggle="modal" data-bs-target="#toDoModal">
+              new goal
+            </button>
+          </div>
         </div>
       </section>
     </div>
   </main>
   <footer class="bg-dark text-light">
   </footer>
+  <!--              STUB                      Modal                   -->
+  <div class="modal fade shift-down" id="toDoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content h-sm text-light text-shadow p-3" onsubmit="app.toDosController.newToDo()">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">What do you want to accomplish?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <input type="text" required minlength="3" maxlength="25" class="form-control bg-glass text-light border-rounded" id="new-goal" aria-describedby="new-goal">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
+          <button type="submit" class="btn btn-primary">Set Goal!</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

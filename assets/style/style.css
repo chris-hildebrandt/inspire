@@ -71,3 +71,14 @@ background-color: rgba(0, 0, 0, .2) !important;
 .full-height {
   height: 80vh;
 }
+
+.h-sm {
+  height:min-content;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, .4) !important;
+}
+
+.shift-down {
+  transform: translateY(10%);
+}

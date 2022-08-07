@@ -1,6 +1,6 @@
 import { Pop } from "../Utils/Pop.js"
-import { displayService } from "../Services/DisplayService.js"
 import { ProxyState } from "../AppState.js"
+import { displayService } from "../Services/DisplayService.js"
 
 function _drawBgImg(){
   document.body.style.backgroundImage = `url(${ProxyState.backgroundImg})`;
@@ -41,7 +41,7 @@ export class DisplayController{
   constructor(){
     _drawTime();
     this.getBackgroundImg();
-    setInterval(this.getBackgroundImg, 120000);
+    setInterval(this.getBackgroundImg, 60000);
     ProxyState.on('backgroundImg', _drawBgImg);
     setInterval(_drawTime, 1000);
   }
