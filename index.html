@@ -52,9 +52,9 @@
 <!--                STUB                to do form              -->
         <div class="col-8 col-md-4 card bg-glass align-self-center offset-md-8">
           <div class="row">
-            <p class="col-6">To Do:</p>
-            <p class="col-5 offset-1">Completed: <span id="tasks-total">10</span> / <span id="tasks-completed" class="">10</span></p>
-            <div id="to-do">
+            <p class="col-6"><b>To Do:</b></p>
+            <p class="col-5 offset-1"><b>Completed: <span id="tasks-completed">10</span> / <span id="tasks-total" class="">10</span></b></p>
+            <div id="to-do" class="col-12 m-0 p-0">
               <!-- <div class="col-12 m-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">example</label>
@@ -78,10 +78,10 @@
           <h5 class="modal-title" id="exampleModalLabel">What do you want to accomplish?</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <input type="text" required minlength="3" maxlength="25" class="form-control bg-glass text-light border-rounded" id="new-goal" aria-describedby="new-goal">
+        <input type="text" required minlength="3" maxlength="50" class="form-control bg-glass text-light border-rounded" id="goal" aria-describedby="new-goal">
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
-          <button type="submit" class="btn btn-primary">Set Goal!</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Set Goal!</button>
         </div>
       </form>
     </div>

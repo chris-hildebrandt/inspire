@@ -7,6 +7,10 @@ function _drawToDos() {
   ProxyState.toDos.forEach(t => template += t.ToDoTemplate)
   // @ts-ignore
   document.getElementById('to-do').innerHTML = template
+  // @ts-ignore
+  document.getElementById('tasks-total').innerText = ProxyState.toDos.length
+  // @ts-ignore
+  document.getElementById('tasks-completed').innerText = ProxyState.toDos.filter(t => t.completed).length
 }
 
 export class ToDosController {
@@ -25,8 +29,16 @@ export class ToDosController {
   }
 
   async newToDo() {
+    // @ts-ignore
+    window.event.preventDefault()
     try {
-      await toDosService.newToDo()
+      // @ts-ignore
+      let form = window.event.target
+      let formData = {
+        // @ts-ignore
+        description: form.goal.value
+      }
+        await toDosService.newToDo(formData)
     } catch (error) {
       console.error('[newToDo]', error)
       Pop.error(error)
@@ -35,11 +47,6 @@ export class ToDosController {
 
   async toggleToDo(toDoId) {
     try {
-      let toDo = ProxyState.toDos.find(t => t.id == toDoId)
-      // @ts-ignore
-      if(toDo.completed == false) {
-        Pop.toast('Congratulations!!')
-      }
       await toDosService.toggleToDo(toDoId)
     } catch (error) {
       console.error('[toggleToDo]', error)
@@ -47,10 +54,10 @@ export class ToDosController {
     }
   }
 
-  async deleteToDo(toDoId){
+  async deleteToDo(toDoId) {
     try {
       const yes = await Pop.confirm('Delete this goal?')
-      if (!yes){
+      if (!yes) {
         return
       }
       await toDosService.deleteToDo(toDoId)

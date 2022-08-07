@@ -82,3 +82,7 @@ background-color: rgba(0, 0, 0, .2) !important;
 .shift-down {
   transform: translateY(10%);
 }
+
+.trash {
+  margin-left: auto;
+}
