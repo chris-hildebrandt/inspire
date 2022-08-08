@@ -13,6 +13,20 @@ function _drawToDos() {
   document.getElementById('tasks-completed').innerText = ProxyState.toDos.filter(t => t.completed).length
 }
 
+function cakeFlip(toDoId) {
+  // @ts-ignore
+  if (ProxyState.toDos.find(t => t.id = toDoId).description.includes('have') && ('cake')) {
+    // @ts-ignore
+    let cake = ProxyState.toDos.filter(t => t.description.includes('eat') && ('cake'))
+    cake.forEach(c => c.completed = !c.completed)
+  // @ts-ignore
+  } else if (ProxyState.toDos.find(t => t.id = toDoId).description.includes('eat') && ('cake')) {
+    // @ts-ignore
+    let cake = ProxyState.toDos.filter(t => t.description.includes('have') && ('cake'))
+    cake.forEach(c => c.completed = !c.completed)
+  }
+}
+
 export class ToDosController {
   constructor() {
     ProxyState.on("toDos", _drawToDos)
@@ -38,7 +52,7 @@ export class ToDosController {
         // @ts-ignore
         description: form.goal.value
       }
-        await toDosService.newToDo(formData)
+      await toDosService.newToDo(formData)
     } catch (error) {
       console.error('[newToDo]', error)
       Pop.error(error)
@@ -67,3 +81,4 @@ export class ToDosController {
     }
   }
 }
+

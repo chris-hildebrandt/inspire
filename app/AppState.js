@@ -16,7 +16,7 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Quote').Quote} */
   // @ts-ignore
-  quote = null
+  quotes = null
 
   backgroundImg = ''
 

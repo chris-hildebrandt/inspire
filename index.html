@@ -32,14 +32,14 @@
       <section class="row full-height">
 <!--                STUB              quotes                   -->
         <div class="col-10 text-light text-shadow no-select m-3">
-          <div class="quote container-fluid">
-            <h5 id="quote">
+          <div id="quotes" class="quote container-fluid">
+            <h5>
             "What matters <b>most</b> in life are quotes and stuff that tell you what life is <b>really</b> all about...
             and here's a picture of a tree"</h5>
             <h5 id="author" class="text-light text-center text-shadow">-the wizened sage</h5>
           </div>
         </div>
-        <button class="col-1 btn btn-primary h-sm d-none d-md-block text-light text-shadow" onclick="app.displayController.getBackgroundImg()">next inspiration</button>
+        <button class="col-1 btn btn-primary h-sm d-none d-md-block text-light text-shadow" onclick="app.displayController.getBackgroundImg(); app.quotesController.getQuotes()">next inspiration</button>
           <div class="col-2 weather-box container-fluid mt-4" id="weather">
 <!--                STUB               Weather                 -->
             <!-- <section class="d-flex">

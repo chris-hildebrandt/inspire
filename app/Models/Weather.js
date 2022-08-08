@@ -1,6 +1,5 @@
 import { ProxyState } from "../AppState.js"
 
-
 export class Weather {
   constructor(data) {
     this.weather = data.weather[0].description

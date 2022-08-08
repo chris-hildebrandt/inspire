@@ -6,7 +6,6 @@ function _drawBgImg(){
   document.body.style.backgroundImage = `url(${ProxyState.backgroundImg})`;
   // document.body.style.backgroundRepeat = "no-repeat";
   // document.body.style.backgroundSize = "cover";
-
 }
 
 function _drawTime(){
@@ -37,7 +36,6 @@ function _drawTime(){
 
 export class DisplayController{
 
-
   constructor(){
     _drawTime();
     this.getBackgroundImg();
@@ -54,6 +52,4 @@ export class DisplayController{
       Pop.error(error)
     }
   }
-
-  
 }

@@ -3,9 +3,10 @@ import { ProxyState } from "../AppState.js"
 import { Quote } from "../Models/Quote.js"
 
 class QuotesService{
-  async getQuote(){
+
+  async getQuotes(){
     let res = await sandboxApi.get('/quotes')
-    ProxyState.quote = new Quote(res.data)
+    ProxyState.quotes = new Quote(res.data)
   }
 }
 

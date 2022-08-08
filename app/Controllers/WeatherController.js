@@ -3,9 +3,6 @@ import { ProxyState } from "../AppState.js"
 import { Pop } from "../Utils/Pop.js";
 
 function _drawWeather() {
-  // TODO fix template getter
-  // @ts-ignore
-  console.log(ProxyState.weather);
   // @ts-ignore
   document.getElementById('weather').innerHTML = ProxyState.weather.WeatherTemplate
 }
@@ -22,7 +19,7 @@ export class WeatherController {
     try {
       await weatherService.getWeather()
     } catch (error) {
-      console.error('getWeather', error)
+      console.error('[getWeather]', error)
       Pop.error(error)
     }
   }
